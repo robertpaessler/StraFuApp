@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+  <title>Teilnahme – Straßenfußball</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <div id="headerleft"></div>
+  <div id="header">
+    <h1>Teilnahme</h1>
+  </div>
+  <div id="headerright"></div>
+
+  <!-- Burger -->
+  <div id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav id="sideMenu">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="teilnahme.html">Teilnahme</a></li>
+      <li><a href="intern.html">Intern</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <!-- LOGIN -->
+    <section class="card" id="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Passwort</label>
+          <input type="password" id="password" required>
+        </div>
+
+        <button type="submit" class="btn">Anmelden</button>
+      </form>
+    </section>
+
+    <!-- ZUKÜNFTIGE TURNIERE -->
+    <section class="card" id="future">
+      <h2>Zukünftige Turniere</h2>
+      <ul class="list" id="futureList"></ul>
+    </section>
+
+    <!-- VERGANGENE TURNIERE -->
+    <section class="card" id="past">
+      <h2>Vergangene Turniere</h2>
+      <ul class="list" id="pastList"></ul>
+    </section>
+
+  </main>
+  <script src="js/index.js"></script>
+  <script src="js/teilnahme.js"></script>
+</body>
+</html>

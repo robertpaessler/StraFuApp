@@ -16,16 +16,64 @@
 		<h1>Straßenfußball für Toleranz</h1>
 	</div>
 	<div id="headerright" aria-hidden="true"></div>
+	
+		<div id="menuToggle">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+
+		<nav id="sideMenu">
+		  <ul>
+			<li class="has-sub">
+			  <a href="#">Startseite</a>
+			  <ul class="submenu">
+				<li><a href="#news">News</a></li>
+				<li><a href="#projekte">Projekte</a></li>
+				<li><a href="#termine">Termine</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+			  </ul>
+			</li>
+			<li><a href="teilnahme.html">Teilnahme</a></li>
+			<li><a href="#intern">Intern</a></li>
+		  </ul>
+		</nav>
 
   <main class="container">
+	
+	<div class="top-logo">
+		<img src="img/strafulogo.png" alt="Straßenfußball Logo">
+	</div>
+	
+	  <nav class="menu">
+		<ul>
+		  <li><a href="#news">News</a></li>
+		  <li><a href="#projekte">Projekte</a></li>
+		  <li><a href="#termine">Termine</a></li>
+		  <li><a href="#kontakt">Kontakt</a></li>
+		</ul>
+	  </nav>
+  
     <section class="card">
-      <h2>Projekt</h2>
+      <h2>Straßenfußball für Toleranz</h2>
       <p class="lead">
         Das Projekt „Straßenfußball für Toleranz“ startete erstmals im Jahr 2000 und avancierte schnell zu einem Erfolgsmodell, das inzwischen auch über die Landesgrenzen hinaus einen großen Zuspruch erfährt. Die besonderen Spielregeln stellen ein faires und tolerantes Miteinander in den Vordergrund und fördern zugleich die Mitbestimmung, die Teilhabe und das Verantwortungsbewusstsein junger Menschen. Das Spiel ist offen für alle und ermöglicht einen einfachen Zugang zum Sport. Neben der sportlichen Wertung gibt es zudem eine zusätzliche Fairplay-Wertung. Die notwendigen, auf Fairness basierenden Zusatzregeln werden von den Teams selbst bestimmt. Beim „Straßenfußball für Toleranz“ gibt es keine Schiedsrichter. Stattdessen agieren am Spielfeldrand sogenannte Teamer, die das Spielgeschehen von außen beobachten und nur in Ausnahmesituation eingreifen. Sie werden seitens des Projektes zu Streitschlichtern und Konfliktlotsen ausgebildet und werden nur aktiv, wenn die Teams eventuelle Probleme nicht selber lösen können. Seit 2020 gibt es zusätzlich zu den Teamern die Junior- und Standortmanager/-innen. Die erfahrenen Teamer bekommen damit eine Möglichkeit sich weiterzuentwickeln. Die Brandenburgische Sportjugend veranstaltet alljährlich zahlreiche Straßenfußballturniere, führt verschiedene Bildungsangebote mit der Methode „Straßenfußball für Toleranz“ durch und bildet Jugendliche zu Teamern und Multiplikatoren aus.
       </p>
     </section>
+	
+	<section id="news" class="card">
+	  <h2>News</h2>
+	  <p>Hier stehen aktuelle Nachrichten.</p>
+	</section>
 
-    <section class="card">
+	<section id="projekte" class="card">
+	  <h2>Projekte</h2>
+	  <p class="lead">
+		Die Projekte vorgestellt ...
+	  </p>
+	</section>
+
+    <section id="termine" class="card">
       <div class="row">
         <h2>Termine</h2>
       </div>
@@ -33,7 +81,14 @@
       <div id="termineEmpty" class="muted" hidden>Keine Termine vorhanden.</div>
       <ul id="termineList" class="list"></ul>
     </section>
+	
+	<section id="kontakt" class="card">
+	  <h2>Kontakt</h2>
+	  <p>Kontaktformular oder E-Mail hier einfügen.</p>
+	</section>
   </main>
+  
+  <button id="toTopBtn" aria-label="Nach oben scrollen">↑</button>
 
   <script src="cordova.js"></script>
   <script src="js/index.js"></script>

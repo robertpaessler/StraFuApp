@@ -1,8 +1,27 @@
 (function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const sideMenu = document.getElementById("sideMenu");
   const listEl = document.getElementById("termineList");
   const emptyEl = document.getElementById("termineEmpty");
   const btnReload = document.getElementById("btnReload");
+  const toTopBtn = document.getElementById("toTopBtn");
 
+  function initMenu() {
+	  if (!menuToggle || !sideMenu) return;
+
+	  // Menü öffnen/schließen
+	  menuToggle.addEventListener("click", () => {
+		sideMenu.classList.toggle("open");
+	  });
+
+	  // Menü schließen bei Klick auf Link
+	  sideMenu.querySelectorAll("a").forEach(link => {
+		link.addEventListener("click", () => {
+		  sideMenu.classList.remove("open");
+		});
+	  });
+	}
+  
   function formatDateISO(iso) {
     if (!iso || typeof iso !== "string") return "";
     const [y, m, d] = iso.split("-");
@@ -47,7 +66,9 @@
     listEl.innerHTML = "";
     const items = Array.isArray(termine) ? termine : [];
 
-    items.sort((a, b) => String(a?.date || "").localeCompare(String(b?.date || "")));
+    items.sort((a, b) =>
+      String(a?.date || "").localeCompare(String(b?.date || ""))
+    );
 
     if (items.length === 0) {
       emptyEl.hidden = false;
@@ -74,8 +95,36 @@
     }
   }
 
+  function initScrollToTop() {
+    if (!toTopBtn) return;
+
+    // Button initial verstecken
+    toTopBtn.style.display = "none";
+
+    // Anzeigen / Ausblenden beim Scrollen
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        toTopBtn.style.display = "block";
+      } else {
+        toTopBtn.style.display = "none";
+      }
+    });
+
+    // Klick → nach oben scrollen
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+
   function onReady() {
     btnReload?.addEventListener("click", loadTermine);
+
+    initScrollToTop();
+	initMenu();
+
     loadTermine();
   }
 
