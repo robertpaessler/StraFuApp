@@ -201,6 +201,20 @@ section {
   color: #003366;
 }
 
+.footer-image {
+  display: block;
+  max-width: 20%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.menu-footer-image {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 20px auto;
+}
+
 #toTopBtn {
   position: fixed;
   bottom: 20px;
